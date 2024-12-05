@@ -1,0 +1,11 @@
+<div *ngIf="watchlist.length > 0; else noMovies">
+  <div *ngFor="let movie of watchlist" class="movie-card">
+    <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" />
+    <h3>{{ movie.title }}</h3>
+    <p><strong>Rating:</strong> {{ movie.vote_average }}</p>
+    <button (click)="removeFromWatchlist(movie.movieId)">Remove</button>
+  </div>
+</div>
+<ng-template #noMovies>
+  <p>Your watchlist is empty.</p>
+</ng-template>

@@ -1,0 +1,30 @@
+<div class="movie-details" *ngIf="movieDetails">
+  <img
+    [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path"
+    alt="{{ movieDetails.title }}"
+  />
+  <div class="movie-details-content">
+    <h1>{{ movieDetails.title }}</h1>
+    <p class="tagline">{{ movieDetails.tagline }}</p>
+    <p><strong>Overview:</strong> {{ movieDetails.overview }}</p>
+    <p><strong>Release Date:</strong> {{ movieDetails.release_date }}</p>
+    <p><strong>Rating:</strong> {{ movieDetails.vote_average }}</p>
+  </div>
+  
+</div>
+
+
+<!-- Back Button -->
+<div class="back-button">
+  
+  <button 
+  (click)="addToWatchlistt(movieDetails)" 
+  class="btn btn-primary btn-lg mt-3"
+>
+  Add to Watchlist
+</button>
+ <br> <br>
+  <button (click)="goBack()"> Back to Movie List</button> <br> <br>
+  
+
+</div>

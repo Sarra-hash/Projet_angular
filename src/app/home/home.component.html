@@ -1,0 +1,52 @@
+<div class="home-container">
+  <h1>Welcome to CinemaApp!</h1>
+  <p *ngIf="isLoggedIn">Hello, <strong>{{ userName }}</strong>! Enjoy your experience.</p>
+
+  <div>
+    <!-- movie-list.component.html -->
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchQuery"
+    (ngModelChange)="onSearchChange()"
+    placeholder="Search for movies"
+    class="search-input"
+  />
+</div>
+<div *ngIf="!isLoggedIn" class="auth-links">
+  <a routerLink="/register" class="btn btn-primary">Register</a>
+  <a routerLink="/login" class="btn btn-secondary">Login</a>
+</div>
+<div *ngIf="isLoggedIn">
+  <a routerLink="/watchlistfk" class="btn btn-primary" style="margin-right: 10px;">Watchlist</a>
+  <a routerLink="/ticket-Info" class="btn btn-primary">Ticket Informations</a>
+
+</div>
+
+<div class="movies-grid">
+  <div class="movie-card" *ngFor="let movie of movies ;let i =index">
+    <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" />
+    <h3>{{ movie.title }}</h3>
+    <p>{{ movie.overview }}</p>
+    <p><strong>Rating:</strong> {{ movie.vote_average }}</p>
+    <a [routerLink]="['/movie', movie.id]"(click)="viewDetails(movie)">View Details</a>
+    <button (click)="buyTicket(movie)" class="btn btn-primary mt-2 w-100">Buy Ticket</button>
+
+   
+    
+  </div>
+  
+
+  <app-movie-details *ngIf="selectedMovie" [movie]="selectedMovie"></app-movie-details>
+
+</div>
+
+<!-- Pagination buttons -->
+<div class="pagination">
+  <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>
+
+  </div>
+</div>

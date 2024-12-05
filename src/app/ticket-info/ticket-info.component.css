@@ -1,0 +1,73 @@
+/* Table Custom Styles */
+.custom-table {
+  background-color: #343a40; /* Dark background for the table */
+  color: #fff; /* White text color */
+  border-radius: 10px; /* Rounded corners for the table */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
+}
+
+.custom-table th {
+  background-color: #555; /* Darker background for headers */
+  color: #fff; /* White text color for headers */
+  text-align: center; /* Center-align header text */
+}
+
+.custom-table td {
+  text-align: center; /* Center-align table data */
+}
+
+.custom-table tbody tr:hover {
+  background-color: #444; /* Highlight rows on hover */
+  cursor: pointer;
+}
+
+.custom-table .table-striped tbody tr:nth-child(odd) {
+  background-color: #444; /* Slightly different background for odd rows */
+}
+
+.custom-table .table-striped tbody tr:nth-child(even) {
+  background-color: #555; /* Slightly darker background for even rows */
+}
+
+.custom-table .table-bordered td, .custom-table .table-bordered th {
+  border-color: #666; /* Custom border color */
+}
+
+.custom-table .table-hover tbody tr:hover {
+  background-color: #666; /* Highlight rows when hovered */
+}
+
+/* Back Button Styles */
+.back-btn {
+  margin-top: 20px; /* Add space above the button */
+  background-color: #e69500; /* Orange background */
+  color: #fff; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove border */
+  width: 200px; /* Set fixed width */
+  display: block; /* Make it block-level */
+  margin-left: auto;
+  margin-right: auto; /* Center the button */
+}
+
+.back-btn:hover {
+  background-color: #ff8c00; /* Slightly darker orange when hovered */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.back-btn:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: none; /* Remove box-shadow */
+}
+/* Custom style for the cancel button */
+.btn-danger {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #d32f2f;
+}

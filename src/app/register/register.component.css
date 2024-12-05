@@ -1,0 +1,33 @@
+.card {
+  background-color: #1e1e1e; /* Dark theme */
+  border-radius: 10px;
+}
+
+h2 {
+  color: #ff8800; /* Orange text */
+}
+label {
+  color: #ff8800; /* Orange for better contrast */
+  font-weight: bold;
+  background-color: #1e1e1e; /* Matches card background */
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+.btn-primary {
+  background-color: #ff8800; /* Orange background */
+  border: none; /* Remove default border */
+  color: #fff; /* White text for contrast */
+  font-weight: bold; /* Make the text more prominent */
+  text-transform: uppercase; /* Optional: Capitalize text */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.btn-primary:hover {
+  background-color: #cc6e00; /* Slightly darker orange for hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 5px 2px rgba(255, 136, 0, 0.5); /* Add a glowing effect on focus */
+  outline: none; /* Remove default focus outline */
+}

@@ -1,0 +1,29 @@
+<div class="container mt-4 watchlist-container">
+  <h2 class="text-center mb-4 watchlist-title">My Watchlist</h2>
+  <button (click)="goBack()" class="btn btn-back">Back to Movie List</button>
+  <div class="row">
+    <div *ngFor="let movie of watchlist" class="col-md-4 col-sm-6 mb-4">
+      <div class="card watchlist-card">
+        <img
+          [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+          class="card-img-top"
+          [alt]="movie.title"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-truncate" title="{{ movie.title }}">
+            {{ movie.title }}
+          </h5>
+          <p class="card-text">
+            <strong>Rating:</strong> {{ movie.vote_average }}/10
+          </p>
+          <button
+            class="btn btn-remove"
+            (click)="removeFromWatchlist(movie.movieId)"
+          >
+            Remove from Watchlist
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

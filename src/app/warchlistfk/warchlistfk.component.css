@@ -1,0 +1,52 @@
+/* Custom styles for dark and orange theme */
+.watchlist-container {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.watchlist-title {
+  color: #ff8c00;
+}
+
+.btn-back {
+  background-color: transparent;
+  color: #ff8c00;
+  border: 2px solid #ff8c00;
+  margin-bottom: 20px;
+}
+
+.btn-back:hover {
+  background-color: #ff8c00;
+  color: #333;
+}
+
+.watchlist-card {
+  background-color: #444;
+  border: 1px solid #ff8c00;
+}
+
+.card-body {
+  color: #ddd;
+}
+
+.card-title {
+  color: #ff8c00;
+}
+
+.btn-remove {
+  background-color: #ff5733;
+  border: none;
+}
+
+.btn-remove:hover {
+  background-color: #e14d2a;
+}
+
+/* Control the size of the image */
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* This ensures the image covers the space without distortion */
+  border-bottom: 1px solid #ff8c00; /* Optional: Add a small border below the image */
+}
